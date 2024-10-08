@@ -16,3 +16,4 @@ def test_correction_bolus():
     config = PumpConfig(basal_rates=[0.8] * 24, insulin_to_carb_ratio=10, insulin_sensitivity_factor=30, max_bolus=10, modes={})
     pump = InsulinPump(config)
     assert pump.calculate_correction_bolus(180, 120) == 2  # Bolus de correction
+
